@@ -9,7 +9,7 @@ module.exports = function () {
                 title: "style error"
             }))
             .pipe($.gp.csso())
-            .pipe($.gp.sourcemaps.write())
+            .pipe($.gp.sourcemaps.write('.'))
             .pipe($.gulp.dest('build/static/css'))
             .pipe($.bs.reload({
                 stream: true
