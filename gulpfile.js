@@ -8,6 +8,7 @@ global.$ = {
     cache: require ('gulp-cache'),
     imageminPngquant: require('imagemin-pngquant'),
     imageminJpegRecompress: require('imagemin-jpeg-recompress'),
+    del: require('del'), 
 
     path: {
         tasks: require('./gulp/config/tasks.js')
