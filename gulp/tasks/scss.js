@@ -8,7 +8,6 @@ module.exports = function () {
             .on("error", $.gp.notify.onError({
                 title: "style error"
             }))
-            .pipe($.gp.csso())
             .pipe($.gp.sourcemaps.write('.'))
             .pipe($.gulp.dest('build/static/css'))
             .pipe($.bs.reload({
