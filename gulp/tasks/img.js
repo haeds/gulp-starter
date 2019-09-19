@@ -1,5 +1,5 @@
 var SRC = 'src/static/img/**';
-var DEST = 'build/img/**';
+var DEST = 'build/img/';
 
 module.exports = function () {
     $.gulp.task('img:dev', () => {
