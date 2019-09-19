@@ -1,4 +1,4 @@
-var SRC = ['src/static/scss/main.scss', 'src/components/**/*.scss'];
+var SRC = 'src/scss/main.scss';
 var DEST = 'build/css';
 
 
@@ -13,6 +13,9 @@ module.exports = function () {
                 title: "style error"
             }))
             .pipe($.gp.sourcemaps.write('.'))
+            .pipe($.cleanCSS({
+                compatibility: 'ie8'
+            }))
             .pipe($.gp.concat('styles.min.css'))
             .pipe($.gulp.dest(DEST))
             .pipe($.bs.reload({

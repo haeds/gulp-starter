@@ -1,16 +1,12 @@
-var SRC = 'src/static/img/**';
+var SRC = 'src/img/**';
 var DEST = 'build/img/';
 
 module.exports = function () {
-    $.gulp.task('img:dev', () => {
-        return $.gulp.src(SRC)
-            .pipe($.gulp.dest(DEST))
-    })
 
     $.gulp.task('img', () => {
         return $.gulp.src(SRC)
             .pipe($.changed(DEST))
-            .pipe($.gulpimage({
+            .pipe($.gulpImage({
                 pngquant: true,
                 optipng: false,
                 zopflipng: false,
