@@ -9,7 +9,8 @@ global.$ = {
     imageminPngquant: require('imagemin-pngquant'),
     imageminJpegRecompress: require('imagemin-jpeg-recompress'),
     gulpimage: require('gulp-image'),
-    del: require('del'), 
+    del: require('del'),
+    importFile: require('gulp-file-include'),
 
     path: {
         tasks: require('./gulp/config/tasks.js')
@@ -21,6 +22,6 @@ $.path.tasks.forEach(function (taskPath) {
 });
 
 $.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('pug', 'sass', 'scripts:lib', 'scripts', 'img'),
+    $.gulp.parallel('pug', 'styles', 'jsLibs', 'js', 'img'),
     $.gulp.parallel('watch', 'serve')
 ));

@@ -1,9 +1,9 @@
 module.exports = [
     './gulp/tasks/pug',
-    './gulp/tasks/scss',
+    './gulp/tasks/styles',
     './gulp/tasks/serve',
     './gulp/tasks/img',
     './gulp/tasks/watch',
-    './gulp/tasks/script',
+    './gulp/tasks/js',
     './gulp/tasks/clear'
 ];
