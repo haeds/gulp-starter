@@ -1,29 +1,29 @@
+var SRC = 'src/static/img/**';
+var DEST = 'build/img/**';
+
 module.exports = function () {
     $.gulp.task('img:dev', () => {
-        return $.gulp.src(imgPATH.imput)
-            .pipe($.gulp.dest(imgPATH.output))
+        return $.gulp.src(SRC)
+            .pipe($.gulp.dest(DEST))
     })
-    $.gulp.task('img', function () {
-        return $.gulp.src('src/static/img/**')
-            .pipe($.gp.changed('build/static/img/**'))
-            .pipe($.gp.imagemin(
-                [
-                    $.imageminJpegRecompress({
-                        loops: 5,
-                        min: 70,
-                        max: 75,
-                        quality: 'medium'
-                    }),
-                    $.imageminPngquant({
-                        quality: [0.7, 0.9]
-                    }),
-                ]))
-            .on("error", $.gp.notify.onError({
-                title: "img error"
+
+    $.gulp.task('img', () => {
+        return $.gulp.src(SRC)
+            .pipe($.changed(DEST))
+            .pipe($.gulpimage({
+                pngquant: true,
+                optipng: false,
+                zopflipng: false,
+                jpegRecompress: true,
+                mozjpeg: false,
+                guetzli: false,
+                gifsicle: false,
+                svgo: false,
+                concurrent: 10
             }))
-            .pipe($.gulp.dest('build/static/img/'))
+            .pipe($.gulp.dest(DEST))
             .pipe($.bs.reload({
                 stream: true
-            }));
-    });
+            }))
+    })
 }

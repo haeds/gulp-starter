@@ -8,6 +8,7 @@ global.$ = {
     cache: require ('gulp-cache'),
     imageminPngquant: require('imagemin-pngquant'),
     imageminJpegRecompress: require('imagemin-jpeg-recompress'),
+    gulpimage: require('gulp-image'),
     del: require('del'), 
 
     path: {

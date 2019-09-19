@@ -1,5 +1,5 @@
 module.exports = function () {
-    $.gulp.task('clean', function(){
+    $.gulp.task('clear', function(){
         return $.del('./build')
     })
 }
