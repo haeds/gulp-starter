@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "add": "^2.0.6",
+    "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -28,13 +32,15 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-optipng": "^7.0.0",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.0.0",
-    "imagemin-webp": "^5.1.0"
+    "imagemin-webp": "^5.1.0",
+    "webpack": "^4.40.2",
+    "webpack-stream": "^5.2.1",
+    "yarn": "^1.17.3"
   },
   "dependencies": {
     "jquery": "^3.4.1",

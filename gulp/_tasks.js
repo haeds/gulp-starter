@@ -4,6 +4,6 @@ module.exports = [
     './gulp/serve',
     './gulp/img',
     './gulp/watch',
-    './gulp/js',
+    './gulp/scripts',
     './gulp/clear'
 ];

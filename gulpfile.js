@@ -11,21 +11,21 @@ global.$ = {
     gulpImage: require('gulp-image'),
     del: require('del'),
     importFile: require('gulp-file-include'),
-    uglify: require('gulp-uglify'),
     remember: require('gulp-remember'),
     rename: require('gulp-rename'),
     cleanCSS: require('gulp-clean-css'),
-
+    webpack: require('webpack-stream'),
     path: {
         tasks: require('./gulp/_tasks.js')
     }
 };
 
+
 $.path.tasks.forEach(function (taskPath) {
     require(taskPath)();
 });
 
-$.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('pug', 'styles', 'jsLibs', 'js', 'img'),
-    $.gulp.parallel('watch', 'serve')
+$.gulp.task('default', $.gulp.series('clear',
+    $.gulp.parallel('pug', 'styles', 'img', 'scripts'),
+    $.gulp.parallel('serve', 'watch')
 ));
