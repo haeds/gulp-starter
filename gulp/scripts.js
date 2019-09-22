@@ -1,3 +1,6 @@
+var SRC = 'src/js/main.js';
+var DEST = 'build/';
+
 let webpackConfig = {
     output: {
         filename: 'main.min.js'
@@ -13,13 +16,15 @@ let webpackConfig = {
                 }
             }
         }]
-    }
+    },
+    mode: 'production'
 }
 module.exports = function () {
     $.gulp.task('scripts', function () {
-        return $.gulp.src('./src/js/main.js')
+        return $.gulp.src(SRC)
+            .pipe($.changed(DEST))
             .pipe($.webpack(webpackConfig))
-            .pipe($.gulp.dest('build/js/'))
+            .pipe($.gulp.dest(DEST))
             .pipe($.bs.reload({
                 stream: true
             }));

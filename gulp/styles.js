@@ -1,22 +1,24 @@
 var SRC = 'src/scss/main.scss';
-var DEST = 'build/css';
+var DEST = 'build/';
 
 
 module.exports = function () {
     $.gulp.task('styles', function () {
         return $.gulp.src(SRC)
-            .pipe($.gp.sass({}))
-            .pipe($.gp.autoprefixer({
-                overrideBrowserslist: ['last 10 versions'],
+            .pipe($.changed(DEST))
+            .pipe($.sass({}))
+            .pipe($.autoprefixer({
+                overrideBrowserslist: ['>0.1%'],
             }))
-            .on("error", $.gp.notify.onError({
+            .on("error", $.notify.onError({
                 title: "style error"
             }))
-            .pipe($.gp.sourcemaps.write('.'))
+            // .pipe($.gp.sourcemaps.init())
             .pipe($.cleanCSS({
-                compatibility: 'ie8'
+                level: 2
             }))
-            .pipe($.gp.concat('styles.min.css'))
+            // .pipe($.gp.sourcemaps.write('.'))
+            .pipe($.concat('styles.min.css'))
             .pipe($.gulp.dest(DEST))
             .pipe($.bs.reload({
                 stream: true
