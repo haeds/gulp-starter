@@ -14,6 +14,7 @@
     "@babel/preset-env": "^7.6.0",
     "add": "^2.0.6",
     "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -23,15 +24,20 @@
     "gulp-concat": "^2.6.1",
     "gulp-image": "^5.1.0",
     "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
+    "gulp-purgecss": "^1.2.0",
     "gulp-rename": "^1.4.0",
+    "gulp-rsync": "^0.0.8",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "popper.js": "^1.16.0",
     "webpack": "^4.40.2",
     "webpack-stream": "^5.2.1",
     "yarn": "^1.17.3"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "jquery": "^3.4.1",
     "slick-carousel": "^1.8.1"
   }

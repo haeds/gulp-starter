@@ -2,7 +2,6 @@ var SRC = 'src/img/**';
 var DEST = 'build/img/';
 
 module.exports = function () {
-
     $.gulp.task('img', () => {
         return $.gulp.src(SRC)
             .pipe($.changed(DEST))

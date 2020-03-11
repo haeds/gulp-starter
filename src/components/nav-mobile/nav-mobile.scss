@@ -1,0 +1,48 @@
+nav.mobile {
+    .navbar-mobile {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding-inline-start: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .active {
+        color: #ffffff !important;
+    }
+
+    .nav-link {
+        color: #b3b3b3;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .fas {
+        color: #b3b3b3;
+        font-size: 1.5rem;
+    }
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+    header {
+        nav {
+            .navbar {
+                .brand-logo {
+                    height: 40px;
+                }
+
+
+            }
+        }
+    }
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+    nav.mobile {
+        display: none;
+    }
+}

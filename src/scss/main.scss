@@ -1,12 +1,58 @@
+@import "vars";
+@import "libs";
+@import "mixins";
+@import "fonts";
+
 body {
-    background-color: #ffffff;
+	color: $text;
+
+	font-family: $default-font;
+
+	input,
+	textarea {
+		border: #666 1px solid;
+		outline: none;
+
+		&:focus:required:invalid {
+			border-color: red;
+		}
+
+		&:required:valid {
+			border-color: green;
+		}
+	}
 }
 
 h1 {
-    font-size: 26px;
-    color: red;
+	font-size: 2rem;
+	font-weight: 600;
+	color: $text;
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: $text;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+button {
+	&:focus {
+		outline: none;
+	}
 }
 
 
-
-@import "libs.scss"
+@import "_components";
+@import "media";

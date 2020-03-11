@@ -1,0 +1,22 @@
+nav.mobile.fixed-bottom
+  ul.navbar-mobile.flex-row
+    li
+      a(class={active: currentUrl === '/'} href='/').nav-link
+        i(class={active: currentUrl === '/'} href='/').fas.fa-home
+        | Главная
+    li
+      a(class={active: currentUrl === '/catalog'} href='/catalog.html').nav-link
+        i(class={active: currentUrl === '/catalog'} href='/catalog.html').fas.fa-car
+        | Каталог
+    //- li
+    //-   a(class={active: currentUrl === '/service'} href='/service.html').nav-link
+    //-     i(class={active: currentUrl === '/service'} href='/service.html').fas.fa-file-alt
+    //-     | Услуги
+    li
+      a(class={active: currentUrl === '/terms'} href='/terms.html').nav-link
+        i(class={active: currentUrl === '/terms'} href='/terms.html').fas.fa-info-circle
+        | Условия
+    li
+      a(class={active: currentUrl === '/contact'} href='/contact.html').nav-link
+        i(class={active: currentUrl === '/contact'} href='/contact.html').fas.fa-map-marker-alt
+        | Контакты

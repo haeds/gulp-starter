@@ -17,10 +17,10 @@ let webpackConfig = {
             }
         }]
     },
-    mode: 'development'
+    mode: 'production'
 }
 module.exports = function () {
-    $.gulp.task('scripts', function () {
+    $.gulp.task('scripts-prod', function () {
         return $.gulp.src(SRC)
             .pipe($.changed(DEST))
             .pipe($.webpack(webpackConfig))

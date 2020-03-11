@@ -1,0 +1,27 @@
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		meta(name="description" content=meta)
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="icon" href="../../img/favicon/favicon.ico")
+		link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png")
+		meta(name="theme-color" content="#1F2024")
+		link(rel="stylesheet" type='text/css' href="../../styles.min.css")
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body
+		include ../components/header/header
+		block content
+		include ../components/back-to-top/back-to-top
+		include ../components/footer/footer
+	block scripts
+		script(src="../../main.min.js")
